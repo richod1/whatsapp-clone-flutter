@@ -69,6 +69,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -87,6 +88,11 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+
+# flutter_launcher_icons:
+#   image_path_android: "assets/whatsapp_iconlogo.png"
+#   image_path_ios: "assets/whatsapp_iconlogo.png"
+#   android: true # can specify file name here e.g. "ic_launcher"
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
