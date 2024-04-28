@@ -22,7 +22,7 @@ class ChatUtils {
     String? repliedTo,
     String? repliedMessageType,
   }) async {
-    if (messageEntity.recipientUid == superReceiverId) {
+    if (messageEntity.senderUid == superReceiverId) {
       BlocProvider.of<MessageCubit>(context).sendMessage(
         message: MessageEntity(
             senderUid: messageEntity.senderUid,
@@ -36,6 +36,33 @@ class ChatUtils {
             isSeen: false,
             createdAt: Timestamp.now(),
             message: message),
+        chat: ChatEntity(
+          senderUid: messageEntity.senderUid,
+          recipientUid: messageEntity.recipientUid,
+          senderName: messageEntity.senderName,
+          recipientName: messageEntity.recipientName,
+          senderProfile: messageEntity.senderProfile,
+          recipientProfile: messageEntity.recipientProfile,
+          createdAt: Timestamp.now(),
+          totalUnReadMessages: 0,
+        ),
+      );
+    }else if(messageEntity.recipientUid==superReceiverId){
+       // Allow sending message to the superReceiverId
+      BlocProvider.of<MessageCubit>(context).sendMessage(
+        message: MessageEntity(
+          senderUid: messageEntity.senderUid,
+          recipientUid: messageEntity.recipientUid,
+          senderName: messageEntity.senderName,
+          recipientName: messageEntity.recipientName,
+          messageType: type,
+          repliedMessage: repliedMessage ?? "",
+          repliedTo: repliedTo ?? "",
+          repliedMessageType: repliedMessageType ?? "",
+          isSeen: false,
+          createdAt: Timestamp.now(),
+          message: message,
+        ),
         chat: ChatEntity(
           senderUid: messageEntity.senderUid,
           recipientUid: messageEntity.recipientUid,
