@@ -210,20 +210,21 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                           fontSize: 16, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  Tab(
-                    child: Text(
-                      "Status",
-                      style: TextStyle(
-                          fontSize: 16, fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                  Tab(
-                    child: Text(
-                      "Calls",
-                      style: TextStyle(
-                          fontSize: 16, fontWeight: FontWeight.w600),
-                    ),
-                  ),
+                  // DEACTIVATE STATUS && CALLS
+                  // Tab(
+                  //   child: Text(
+                  //     "Status",
+                  //     style: TextStyle(
+                  //         fontSize: 16, fontWeight: FontWeight.w600),
+                  //   ),
+                  // ),
+                  // Tab(
+                  //   child: Text(
+                  //     "Calls",
+                  //     style: TextStyle(
+                  //         fontSize: 16, fontWeight: FontWeight.w600),
+                  //   ),
+                  // ),
                 ],
 
               ),

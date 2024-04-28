@@ -200,41 +200,41 @@ class _SingleChatPageState extends State<SingleChatPage> {
               ),
             ],
           ),
-          actions: [
-            GestureDetector(
-              onTap: () {
-                ChatUtils.makeCall(context, callEntity: CallEntity(
-                  callerId: widget.message.senderUid,
-                  callerName: widget.message.senderName,
-                  callerProfileUrl: widget.message.senderProfile,
-                  receiverId: widget.message.recipientUid,
-                  receiverName: widget.message.recipientName,
-                  receiverProfileUrl: widget.message.recipientProfile,
-                ));
-              },
-              child: const Icon(
-                Icons.videocam_rounded,
-                size: 25,
-              ),
-            ),
-            const SizedBox(
-              width: 25,
-            ),
-            const Icon(
-              Icons.call,
-              size: 22,
-            ),
-            const SizedBox(
-              width: 25,
-            ),
-            const Icon(
-              Icons.more_vert,
-              size: 22,
-            ),
-            const SizedBox(
-              width: 15,
-            ),
-          ],
+          // actions: [
+          //   GestureDetector(
+          //     onTap: () {
+          //       ChatUtils.makeCall(context, callEntity: CallEntity(
+          //         callerId: widget.message.senderUid,
+          //         callerName: widget.message.senderName,
+          //         callerProfileUrl: widget.message.senderProfile,
+          //         receiverId: widget.message.recipientUid,
+          //         receiverName: widget.message.recipientName,
+          //         receiverProfileUrl: widget.message.recipientProfile,
+          //       ));
+          //     },
+          //     child: const Icon(
+          //       Icons.videocam_rounded,
+          //       size: 25,
+          //     ),
+          //   ),
+          //   const SizedBox(
+          //     width: 25,
+          //   ),
+          //   const Icon(
+          //     Icons.call,
+          //     size: 22,
+          //   ),
+          //   const SizedBox(
+          //     width: 25,
+          //   ),
+          //   const Icon(
+          //     Icons.more_vert,
+          //     size: 22,
+          //   ),
+          //   const SizedBox(
+          //     width: 15,
+          //   ),
+          // ],
         ),
         body: BlocBuilder<MessageCubit, MessageState>(
           builder: (context, state) {
